@@ -2,5 +2,5 @@
 # composer's model seat in the dsh web GUI.
 
 - insert:
-    - id: dsh-model-picker
-      name: 'dsh-model-picker'
+    - id: dsh-model-picker-plus
+      name: 'dsh-model-picker-plus'

@@ -1,5 +1,5 @@
 {
-  "name": "dsh-model-picker",
+  "name": "dsh-model-picker-plus",
   "description": "Enhanced model picker for the dsh web GUI: search-first model popup + separate reasoning-effort selector, both split on a two-zone trigger button",
   "version": "1.24.0",
   "type": "module",
@@ -29,11 +29,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ttmouse/dsh-model-picker.git"
+    "url": "git+https://github.com/samuelluis/dsh-model-picker-plus.git"
   },
-  "homepage": "https://github.com/ttmouse/dsh-model-picker",
+  "homepage": "https://github.com/samuelluis/dsh-model-picker-plus",
   "bugs": {
-    "url": "https://github.com/ttmouse/dsh-model-picker/issues"
+    "url": "https://github.com/samuelluis/dsh-model-picker-plus/issues"
   },
   "engines": {
     "node": "^22.19.0 || >=24.0.0",
