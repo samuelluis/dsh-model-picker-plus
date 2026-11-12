@@ -164,7 +164,7 @@ if (request?.provider !== 'deepseek' || request?.model !== 'deepseek-v4-flash') 
 if (request?.purpose !== 'model-picker-test') throw new Error('the test call must carry its purpose')
 if (request?.maxTokens !== 16) throw new Error('the test call must stay tiny')
 const message = request?.messages?.[0]
-if (message?.role !== 'user' || message?.source?.kind !== 'dsh-model-picker') throw new Error('the test message must name its source')
+if (message?.role !== 'user' || message?.source?.kind !== 'dsh-model-picker-plus') throw new Error('the test message must name its source')
 if (message?.content?.[0]?.text !== 'Reply with OK.') throw new Error('the test message text is wrong')
 if (typeof message?.id !== 'string' || message.id.length === 0) throw new Error('the test message must carry an identity')
 

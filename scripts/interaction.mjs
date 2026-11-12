@@ -85,7 +85,7 @@ const plugin = captured.exports
 const ownedStyle = () => document.getElementById('dsh-model-picker-style')
 console.log('style at load    :', ownedStyle() !== null, '| owner:', ownedStyle()?.dataset.plugin, '| bytes:', ownedStyle()?.textContent.length)
 if (ownedStyle() === null) throw new Error('the module body must inject the stylesheet')
-if (ownedStyle().dataset.plugin !== 'dsh-model-picker') {
+if (ownedStyle().dataset.plugin !== 'dsh-model-picker-plus') {
   throw new Error(`the stylesheet must be claimed by this plugin, got ${JSON.stringify(ownedStyle().dataset.plugin)}`)
 }
 // Exactly the selector the module system's claim pass uses for unowned tags.
@@ -338,14 +338,14 @@ plugin.apply(ctx)
 // A reload of THIS package drops the tag before re-importing the module body.
 // The body has to put it back, unchanged, or the picker comes back unstyled.
 const cssBytes = ownedStyle().textContent.length
-for (const el of [...document.querySelectorAll('style[data-plugin="dsh-model-picker"]')]) el.remove()
+for (const el of [...document.querySelectorAll('style[data-plugin="dsh-model-picker-plus"]')]) el.remove()
 if (ownedStyle() !== null) throw new Error('the simulated reload sweep did not remove the tag')
 // eslint-disable-next-line no-eval
 eval(source)
 const reloadedStyle = ownedStyle()
 console.log('style after reload:', reloadedStyle !== null, '| bytes:', reloadedStyle?.textContent.length)
 if (reloadedStyle === null) throw new Error('re-materializing the module must restore the stylesheet')
-if (reloadedStyle.dataset.plugin !== 'dsh-model-picker') throw new Error('the restored stylesheet lost its owner')
+if (reloadedStyle.dataset.plugin !== 'dsh-model-picker-plus') throw new Error('the restored stylesheet lost its owner')
 if (reloadedStyle.textContent.length !== cssBytes) throw new Error('the restored stylesheet is not the one that was removed')
 
 const { options, Component } = registrations[0]
@@ -2294,7 +2294,7 @@ const ledgerOf = () => JSON.parse(dom.window.localStorage.getItem('dsh.modelPick
 //         declarations are pinned here and the real geometry is measured
 //         against the live app (scripts/compare-panels.mjs).
 {
-  const styles = [...dom.window.document.querySelectorAll('style[data-plugin="dsh-model-picker"]')].map((node) => node.textContent).join('\n')
+  const styles = [...dom.window.document.querySelectorAll('style[data-plugin="dsh-model-picker-plus"]')].map((node) => node.textContent).join('\n')
   const rowAt = styles.indexOf('.dsh-mp2-fallbackItem{')
   const rowRule = styles.slice(rowAt, styles.indexOf('}', rowAt))
   const listAt = styles.indexOf('.dsh-mp2-fallbackList,')
@@ -2530,7 +2530,7 @@ const ledgerOf = () => JSON.parse(dom.window.localStorage.getItem('dsh.modelPick
 //         nudge), and it must not survive when the row is not the current one —
 //         the same rule the model list's tick follows.
 {
-  const styles = [...document.querySelectorAll('style[data-plugin="dsh-model-picker"]')].map((node) => node.textContent).join('\n')
+  const styles = [...document.querySelectorAll('style[data-plugin="dsh-model-picker-plus"]')].map((node) => node.textContent).join('\n')
   const markAt = styles.indexOf('.dsh-mp2-fallbackCurrent{')
   const markRule = markAt === -1 ? '' : styles.slice(markAt, styles.indexOf('}', markAt))
   console.log('current mark  : rule=%s', JSON.stringify(markRule))

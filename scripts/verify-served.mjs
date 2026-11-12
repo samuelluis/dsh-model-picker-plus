@@ -27,7 +27,7 @@ const root = join(here, '..')
 const ORIGIN = process.env.DSH_LIVE_ORIGIN ?? 'http://127.0.0.1:19387'
 const AUTHORITY = new URL(ORIGIN).host
 const INSTALLED = process.env.DSH_INSTALLED_CLIENT
-  ?? join(homedir(), '.dsh/profiles/desktop/node_modules/dsh-model-picker/lib/client.js')
+  ?? join(homedir(), '.dsh/profiles/desktop/node_modules/dsh-model-picker-plus/lib/client.js')
 
 const markers = process.argv.slice(2)
 if (markers.length === 0) markers.push('dsh-mp2-footerProbe')

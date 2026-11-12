@@ -1,5 +1,5 @@
 {
-  "schema": "dsh-model-picker/gateway-liveness/v1",
+  "schema": "dsh-model-picker-plus/gateway-liveness/v1",
   "gateway": "http://127.0.0.1:8326/v1",
   "at": "2026-10-18T07:30:50.797Z",
   "timeoutMs": 20000,

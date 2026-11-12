@@ -5,7 +5,7 @@
 // the next plugin's, and the swap fires whenever that segment differs from
 // the checkout, byte for byte (a marker-based guard misfires once the served
 // build carries an older "new enough" marker).
-export const PICKER_MARK = "window.__ModuleLoader__.load({ id: 'dsh-model-picker'"
+export const PICKER_MARK = "window.__ModuleLoader__.load({ id: 'dsh-model-picker-plus'"
 export const ANY_MARK = "window.__ModuleLoader__.load({ id: '"
 
 /** The picker's segment of a served bundle, or null when it is not in there. */

@@ -5,7 +5,7 @@
   "id": "RL-001",
   "kind": "rule",
   "status": "active",
-  "summary": "App 从 ~/.dsh/profiles/desktop/node_modules/dsh-model-picker 加载拷贝件：lib 改动要 cp 过去并核对 md5；host.js 改动只在进程启动时生效，需完全重启 App；push 后须把两份 lockfile 重钉新 sha",
+  "summary": "App 从 ~/.dsh/profiles/desktop/node_modules/dsh-model-picker-plus 加载拷贝件：lib 改动要 cp 过去并核对 md5；host.js 改动只在进程启动时生效，需完全重启 App；push 后须把两份 lockfile 重钉新 sha",
   "scope": [],
   "sources": ["package.json", "docs/channel-liveness-2026-10-12.md"],
   "key": "deploy-copy-install",

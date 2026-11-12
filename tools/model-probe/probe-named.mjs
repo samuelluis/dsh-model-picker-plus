@@ -108,7 +108,7 @@ const main = async () => {
   await Promise.all(workers)
 
   mkdirSync(dirname(OUT), { recursive: true })
-  writeFileSync(OUT, `${JSON.stringify({ schema: 'dsh-model-picker/named-routes/v1', gateway: GATEWAY, at: new Date().toISOString(), timeoutMs: TIMEOUT_MS, results }, null, 2)}\n`)
+  writeFileSync(OUT, `${JSON.stringify({ schema: 'dsh-model-picker-plus/named-routes/v1', gateway: GATEWAY, at: new Date().toISOString(), timeoutMs: TIMEOUT_MS, results }, null, 2)}\n`)
   const ok = results.filter((r) => r.status === 'OK')
   process.stderr.write(`\ndone: ${ok.length}/${results.length} OK · wrote ${OUT}\n`)
 }

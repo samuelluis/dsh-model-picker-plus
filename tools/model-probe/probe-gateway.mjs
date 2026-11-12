@@ -175,7 +175,7 @@ const main = async () => {
 
   mkdirSync(dirname(OUT), { recursive: true })
   const payload = {
-    schema: 'dsh-model-picker/gateway-liveness/v1',
+    schema: 'dsh-model-picker-plus/gateway-liveness/v1',
     gateway: GATEWAY,
     at: new Date().toISOString(),
     timeoutMs: TIMEOUT_MS,
